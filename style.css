@@ -1,0 +1,139 @@
+:root {
+    --clr-primary-100: hsla(193, 38%, 86%, 1);
+    --clr-primary-900: hsla(219, 22%, 16%, 1);
+    --clr-primary-800: hsla(217, 19%, 24%, 1);
+    --clr-accent-1: hsla(150, 100%, 66%, 1);
+
+    --ff-primary: 'Manrope', sans-serif;
+
+    --ff-body: var(--ff-primary);
+
+    --fw-bold: 800;
+
+    --fs-600: 1.75rem;
+    --fs-100: .813rem;
+
+    --fs-heading: var(--fs-100);
+    --fs-body: var(--fs-600);
+
+    --lh-600 : 2.375rem;
+    --lh-100: 1.063rem;
+
+    --lh-body: var(--lh-600);
+    --lh-heading: var(--lh-100);
+
+    --ls-100: .25rem;
+    --ls-heading: var(--ls-100);
+
+}
+
+    /* Mobile roots */
+
+@media only screen and (max-width: 767px) {
+    :root {
+        --fs-600: 1.5rem;
+        --fs-100: .688rem;
+
+        --lh-600: 2rem;
+        --lh-100: .938rem;
+
+        --ls-100: .219rem;
+    }
+}
+
+/* General Styling*/
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-600);
+
+    background-color: var(--clr-primary-900);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+#container {
+    background-color: var(--clr-primary-800);
+
+    --max-width: 540px;
+    --max-height: 332px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - var(--padding));
+    height: min(var(--max-height), 100% - var(--padding));
+
+    margin-inline: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 1rem;;
+
+    padding: 3rem;
+
+}
+
+@media only screen and (max-width: 767px) {
+    #container {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+
+
+h1 {
+    color: var(--clr-accent-1);
+    font-size: var(--fs-100);
+
+    letter-spacing: var(--ls-heading);
+    line-height: var(--lh-100);
+}
+
+p {
+    color: var(--clr-primary-100);
+    font-size: var(--fs-600);
+
+    line-height: var(--lh-body);
+
+    padding: 24px auto;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+
+}
+button {
+    background-color: var(--clr-accent-1);
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 100%;
+    border: none;
+
+    position: relative;
+    bottom: 2rem;
+}
+
+button:hover, :focus-visible     {
+    filter: drop-shadow(0 0 0.75rem var(--clr-accent-1));
+    cursor: pointer;
+    transition: filter .2s ease-in-out;
+}
+
+/*button:focus-within {
+    transform: rotate(90deg);
+    transition: transform .8s ease;
+} */
+
+
+
+.center {
+    margin-inline: auto;
+}
