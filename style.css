@@ -133,6 +133,21 @@ button:hover, :focus-visible     {
 } */
 
 
+/* loading animation when clicking the button*/
+.loading {
+    animation: spin 1s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 .center {
     margin-inline: auto;

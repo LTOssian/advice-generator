@@ -1,15 +1,18 @@
 const btn = document.querySelector('button');
 
-// get the advice using async await GET
-
-
+/**
+ * 
+ * @returns the advice (STRING) property of the slip object
+ */
 const getAdvice = async () => {
     try {
         const response = await fetch('https://api.adviceslip.com/advice');
 
         if (response.ok) {
             const jsonResponse = await response.json();
+
             const advice_req = jsonResponse.slip.advice;
+            
             return advice_req;
         }
         throw new Error ('Advice Request Failed');
@@ -17,6 +20,11 @@ const getAdvice = async () => {
         console.log(error);
     }
 }
+
+/**
+ * 
+ * @returns the id (INT) property of the slip object
+ */
 
 const getId = async () => {
     try {
@@ -35,7 +43,12 @@ const getId = async () => {
     }
 }
 
+
+
 const displayRequest = async () => {
+
+    displayLoading()
+
     const n_advice = document.querySelector('h1');
     const advice_container = document.querySelector('p');
     if (advice_container.childNodes.length > 0) {
@@ -50,4 +63,15 @@ const displayRequest = async () => {
     advice_container.innerHTML =  `"${advice}"`;
 }
 
+const displayLoading = () => {
+    btn.classList.add("loading");
+    setTimeout(() => {
+        btn.classList.remove("loading");
+    }, 1000)
+
+};
+
+
+displayRequest();
 btn.onclick = displayRequest;
+
