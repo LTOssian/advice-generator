@@ -127,11 +127,6 @@ button:hover, :focus-visible     {
     transition: filter .2s ease-in-out;
 }
 
-/*button:focus-within {
-    transform: rotate(90deg);
-    transition: transform .8s ease;
-} */
-
 
 /* loading animation when clicking the button*/
 .loading {

@@ -46,9 +46,7 @@ const getId = async () => {
 
 
 const displayRequest = async () => {
-
     displayLoading()
-
     const n_advice = document.querySelector('h1');
     const advice_container = document.querySelector('p');
     if (advice_container.childNodes.length > 0) {
