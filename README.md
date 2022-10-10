@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My FEM Profile](https://your-solution-url.com)
-- Live Site URL: [Github Pages](https://your-live-site-url.com)
+- Solution URL: [My FEM Profile](https://www.frontendmentor.io/solutions/advice-generator-app-wapi-html-css-js-5FqBYMNjwu)
+- Live Site URL: [Github Pages](https://ltossian.github.io/advice-generator/)
 
 ## My process
 
